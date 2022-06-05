@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("红茶妹妹本来有的钱:");
+        int red = sc.nextInt();
+        System.out.println("绿茶妹妹本来有的钱:");
+        int green = sc.nextInt();
+        int rednow=red*2+3;
+        int greennow=green*2;
+        if(rednow==greennow){
+            System.out.println("两人几天后的钱一样多了");
+        }
+        else {
+            System.out.println("两人几天后的钱不一样多");
+
+}}
+    }

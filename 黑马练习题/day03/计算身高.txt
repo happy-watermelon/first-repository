@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入父亲的身高:");
+        int dadheight = sc.nextInt();
+        System.out.println("请输入母亲的身高:");
+        int momheight = sc.nextInt();
+        System.out.println("请输入你的性别:");
+        String sex=sc.next();
+        double boyheight=(dadheight+momheight)*1.08/2;
+        double girlheight=(dadheight*0.923+momheight)/2;
+        switch (sex){
+            case "男":{
+                System.out.println("儿子的身高大概是:"+boyheight+"cm");
+                break;
+            }
+            case "女":{
+                System.out.println("女儿的身高大概是:"+girlheight+"cm");
+                break;
+            }
+            default:{
+                System.out.println("请输入正确性别!");
+                break;
+            }
+        }
+    }
+}

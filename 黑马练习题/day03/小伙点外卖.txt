@@ -1,0 +1,12 @@
+public class Solution {
+    public static void main(String[] args) {
+
+        int yuxiang = 24;
+        int mifan = 3;
+        int huasheng = 8;
+        double price1 = (yuxiang + mifan + huasheng) * 0.8;
+        double price2 = mifan + huasheng + 16;
+        String result=(price1>price2)?"套餐二便宜":"套餐一便宜";
+        System.out.println(result);
+    }
+}
