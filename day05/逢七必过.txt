@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入:");
+        int num = sc.nextInt();
+        if (num<1||num>100) System.out.println("请输入1-100以内的数字");
+        else {
+            if (num%7==0||num%10==7||num>70&&num<80){//这里写的十位数带七的为过写的不好,可以改为 num/10%10==7这样形式更好
+                System.out.println("过");
+            }
+            else
+                System.out.println("无事发生");
+        }
+}}
