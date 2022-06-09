@@ -1,0 +1,53 @@
+package com.waterlemon.demo01;
+
+
+import java.util.Random;
+import java.util.Scanner;
+//第一版,就是正常的猜数字
+public class Solution {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int num = random.nextInt(100);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入你猜测的数字:");
+        int  a = sc.nextInt();
+
+        while (a != num) {
+            if (a < num) {
+                System.out.println("猜小了");
+                a = sc.nextInt();
+            } else if (a > num) {
+                System.out.println("猜大了");
+                a = sc.nextInt();
+            }
+
+        }
+        System.out.println("猜对了答案就是:"+a);
+    }
+}
+
+//第二版,想试试用二分法用机器自己来找随机数
+public class Solution {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int num = random.nextInt((100) + 1);
+        int max =100;
+        int min = 1;
+        int mid = (min + max) / 2;
+        while (true) {
+            if (mid != num) {
+                if (mid < num) {
+                    min = mid + 1;
+                } else if (mid > num) {
+                    max = mid - 1;
+                }mid = (min + max) / 2;
+
+            }
+            else
+                break ;
+        }
+            System.out.println("随机数是:" + mid);
+            System.out.println(num);
+        }
+
+}
