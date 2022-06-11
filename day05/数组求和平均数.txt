@@ -1,0 +1,28 @@
+package com.waterlemon.demo01;
+
+
+import java.util.Random;
+
+public class Solution {
+    public static void main(String[] args) {
+        Random r=new Random();
+        int count=0;
+        double avg=0;
+        int sum=0;
+        int[] nums=new int[10];
+        for (int i = 0; i <nums.length ; i++) {
+            nums[i]=r.nextInt(100);
+            sum+=nums[i];
+            System.out.print(nums[i]+" ");
+        }
+        avg=(double)sum/nums.length;
+        System.out.println("数组和为:"+sum);
+        System.out.println("平均数是:"+avg);
+        for (int i = 0; i <nums.length ; i++) {
+            if(nums[i]<avg)
+                count++;
+        }
+        System.out.println("比平均数小的数有"+count+"个");
+    }
+}
+
