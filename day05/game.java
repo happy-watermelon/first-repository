@@ -2,8 +2,10 @@ package com.watermelon.demo04;
 
 public class game {
     public static void main(String[] args) {
-        hero qiaofeng=new hero(100,20,"乔峰");
-        hero laowang=new hero(150,5,"老王");
+        hero qiaofeng=new hero(120,18,"刘强",'女');
+        hero laowang=new hero(150,25,"王富亮",'男');
+        qiaofeng.showheroinfo();
+        laowang.showheroinfo();
 
         //开始格斗
         while(true){
