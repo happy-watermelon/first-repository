@@ -10,6 +10,7 @@ public class Solution {
         int shi=num/10;
         boolean result=ge==6||shi==6||(ge+shi)%6==0;
         System.out.println(result);
+//666666
 
     }
 }
